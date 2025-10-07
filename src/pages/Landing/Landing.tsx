@@ -1,5 +1,6 @@
 import "./Landing.css";
 import { useState, useEffect} from "react";
+import mobilePng from './pool-mobile.png';
 
 export default function Landing() {
   const [isOpen, setIsOpen] = useState(true);
@@ -22,12 +23,10 @@ export default function Landing() {
     <main className="phone" role="region" aria-label="Pool – Spain 2025">
       <header className="container nav" aria-label="Primary">
         <div className="brand" aria-label="Pool logo">
-          <div className="logo" aria-hidden="true"><span>p</span></div>
           <div className="brand-name">pool</div>
         </div>
         <div className="nav-cta">
-          <button onClick={() => setIsOpen(true)} className="btn btn-outline" data-open-modal>Join waitlist</button>
-          <a className="btn btn-primary" href="#download" aria-label="Get the app">Get the app</a>
+          <button onClick={() => setIsOpen(true)} className="btn btn-outline" data-open-modal>Join Now</button>
         </div>
       </header>
 
@@ -43,8 +42,7 @@ export default function Landing() {
               <span className="pill">iOS + Android</span>
             </div>
             <div className="hero-cta">
-              <button onClick={() => setIsOpen(true)} className="btn btn-primary" data-open-modal>Join the waitlist</button>
-              <a className="btn btn-outline" href="#how-it-works">See how it works</a>
+              <button onClick={() => setIsOpen(true)} className="btn btn-primary" data-open-modal>Join Now</button>
             </div>
             <ul className="bullets">
               <li><div className="dot"></div><span>Transparent totals and contributions</span></li>
@@ -53,27 +51,7 @@ export default function Landing() {
             </ul>
           </div>
 
-          <div className="hero-card" aria-label="Preview of jar progress">
-            <svg className="jar" viewBox="0 0 420 420" role="img" aria-label="Savings jar illustration">
-              <defs>
-                <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#9fe1e0" />
-                  <stop offset="100%" stopColor="#eaffff" />
-                </linearGradient>
-              </defs>
-              <path d="M120 70h180c8 0 12 11 6 16-14 12-22 26-22 40v8c58 22 92 69 92 127 0 87-65 142-175 142S23 348 23 261c0-58 33-105 90-127v-8c0-14-8-28-21-40-6-5-1-16 6-16z" fill="#eaf6f7" stroke="#cfeaec" strokeWidth="8"/>
-              <g transform="translate(40,100)">
-                <rect x="10" y="170" width="320" height="90" rx="18" fill="#2bc0bf"/>
-                <rect x="10" y="115" width="320" height="70" rx="18" fill="#1797a0"/>
-                <rect x="10" y="70" width="320" height="55" rx="16" fill="#155c69"/>
-                <rect x="10" y="50" width="320" height="22" rx="10" fill="#0e3b45"/>
-              </g>
-            </svg>
-            <div className="pill-row" style={{ justifyContent: "center" }}>
-              <span className="pill"><strong>Goal:</strong> $300</span>
-              <span className="pill"><strong>Current:</strong> $225</span>
-            </div>
-          </div>
+            <img style={{ width: "500px", marginLeft: "30px" }}src={mobilePng} alt="BigCo Inc. logo"/>
         </section>
 
         <section id="how-it-works" className="features" aria-labelledby="features-title">
@@ -128,10 +106,10 @@ export default function Landing() {
 
         <section className="cta" aria-label="Join our waitlist">
           <div>
-            <h3>Be first in line.</h3>
+            <h3>Start now</h3>
             <p className="sub" style={{ margin: "6px 0 0" }}>We’re rolling out invites soon. Add your name to grab early access and help us shape Pool.</p>
           </div>
-          <button className="btn btn-primary" onClick={() => setIsOpen(true)} data-open-modal>Join the waitlist</button>
+          <button className="btn btn-primary" onClick={() => setIsOpen(true)} data-open-modal>Join Now</button>
         </section>
       </main>
 
@@ -165,7 +143,7 @@ export default function Landing() {
                 <div className="helper">No spam. We’ll only email you with an invite and important updates.</div>
               </div>
               <div className="actions">
-                <button className="btn btn-outline" type="button" data-close-modal>Cancel</button>
+                <button onClick={() => setIsOpen(false)} className="btn btn-outline" type="button" data-close-modal>Cancel</button>
                 <button className="btn btn-primary" type="submit">Join waitlist</button>
               </div>
               <p className="helper" id="form-status" role="status" aria-live="polite"></p>
