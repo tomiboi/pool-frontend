@@ -128,7 +128,7 @@ export default function Landing() {
       >
         <div className="modal">
           <header>
-            <h3 id="waitlist-title">Join the Pool waitlist</h3>
+            <h3 id="waitlist-title">Join Pool</h3>
             <button onClick={() => setIsOpen(false)} className="close" type="button" aria-label="Close" data-close-modal>&times;</button>
           </header>
           <div className="content">
@@ -144,7 +144,7 @@ export default function Landing() {
               </div>
               <div className="actions">
                 <button onClick={() => setIsOpen(false)} className="btn btn-outline" type="button" data-close-modal>Cancel</button>
-                <button className="btn btn-primary" type="submit">Join waitlist</button>
+                <button className="btn btn-primary" type="submit">Join </button>
               </div>
               <p className="helper" id="form-status" role="status" aria-live="polite"></p>
             </form>
