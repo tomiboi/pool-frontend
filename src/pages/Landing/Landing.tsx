@@ -1,11 +1,11 @@
 import "./Landing.css";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import mobilePng from './pool-mobile.png';
 
 export default function Landing() {
   const [isOpen, setIsOpen] = useState(true);
 
-    useEffect(() => {
+  useEffect(() => {
     const script = document.createElement('script');
 
     script.src = "https://getlaunchlist.com/js/widget-diy.js";
@@ -16,7 +16,8 @@ export default function Landing() {
     return () => {
       document.body.removeChild(script);
     }
-    }, []);
+  }, []);
+
 
 
   return (
@@ -51,7 +52,7 @@ export default function Landing() {
             </ul>
           </div>
 
-            <img style={{ width: "500px", marginLeft: "30px" }}src={mobilePng} alt="BigCo Inc. logo"/>
+          <img style={{ width: "500px", marginLeft: "30px" }} src={mobilePng} alt="BigCo Inc. logo" />
         </section>
 
         <section id="how-it-works" className="features" aria-labelledby="features-title">
@@ -74,20 +75,20 @@ export default function Landing() {
             <h4>Track who’s in and how much</h4>
             <div className="img">
               <svg viewBox="0 0 640 380">
-                <rect width="640" height="380" rx="20" fill="#ffffff" stroke="#dceff1"/>
-                <rect x="24" y="24" width="110" height="28" rx="14" fill="#daf3f2"/>
-                <rect x="144" y="24" width="140" height="28" rx="14" fill="#c8eceb"/>
-                <rect x="24" y="90" width="180" height="18" rx="9" fill="#167f86" opacity=".7"/>
-                <rect x="24" y="120" width="120" height="10" rx="5" fill="#dceff1"/>
-                <rect x="520" y="100" width="80" height="26" rx="13" fill="#daf3f2"/>
+                <rect width="640" height="380" rx="20" fill="#ffffff" stroke="#dceff1" />
+                <rect x="24" y="24" width="110" height="28" rx="14" fill="#daf3f2" />
+                <rect x="144" y="24" width="140" height="28" rx="14" fill="#c8eceb" />
+                <rect x="24" y="90" width="180" height="18" rx="9" fill="#167f86" opacity=".7" />
+                <rect x="24" y="120" width="120" height="10" rx="5" fill="#dceff1" />
+                <rect x="520" y="100" width="80" height="26" rx="13" fill="#daf3f2" />
 
-                <rect x="24" y="170" width="180" height="18" rx="9" fill="#1797a0" opacity=".8"/>
-                <rect x="24" y="200" width="120" height="10" rx="5" fill="#dceff1"/>
-                <rect x="520" y="180" width="80" height="26" rx="13" fill="#daf3f2"/>
+                <rect x="24" y="170" width="180" height="18" rx="9" fill="#1797a0" opacity=".8" />
+                <rect x="24" y="200" width="120" height="10" rx="5" fill="#dceff1" />
+                <rect x="520" y="180" width="80" height="26" rx="13" fill="#daf3f2" />
 
-                <rect x="24" y="250" width="180" height="18" rx="9" fill="#2bc0bf"/>
-                <rect x="24" y="280" width="120" height="10" rx="5" fill="#dceff1"/>
-                <rect x="520" y="260" width="80" height="26" rx="13" fill="#daf3f2"/>
+                <rect x="24" y="250" width="180" height="18" rx="9" fill="#2bc0bf" />
+                <rect x="24" y="280" width="120" height="10" rx="5" fill="#dceff1" />
+                <rect x="520" y="260" width="80" height="26" rx="13" fill="#daf3f2" />
               </svg>
             </div>
           </article>
@@ -95,10 +96,10 @@ export default function Landing() {
             <h4>Fast, friendly contributions</h4>
             <div className="img">
               <svg viewBox="0 0 640 380">
-                <rect width="640" height="380" rx="20" fill="#ffffff" stroke="#dceff1"/>
-                <rect x="200" y="80" width="240" height="20" rx="10" fill="#167f86" opacity=".9"/>
-                <rect x="120" y="128" width="400" height="46" rx="12" fill="#f4fbfc" stroke="#d6ecef"/>
-                <rect x="250" y="200" width="140" height="44" rx="22" fill="#149296"/>
+                <rect width="640" height="380" rx="20" fill="#ffffff" stroke="#dceff1" />
+                <rect x="200" y="80" width="240" height="20" rx="10" fill="#167f86" opacity=".9" />
+                <rect x="120" y="128" width="400" height="46" rx="12" fill="#f4fbfc" stroke="#d6ecef" />
+                <rect x="250" y="200" width="140" height="44" rx="22" fill="#149296" />
               </svg>
             </div>
           </article>
@@ -123,8 +124,8 @@ export default function Landing() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="waitlist-title"
-        style={isOpen ? {display: "flex"} : {display:"none"}}
-        // aria-hidden="true"
+        style={isOpen ? { display: "flex" } : { display: "none" }}
+      // aria-hidden="true"
       >
         <div className="modal">
           <header>
